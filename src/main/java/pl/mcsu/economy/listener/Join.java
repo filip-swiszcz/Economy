@@ -11,6 +11,7 @@ public class Join implements Listener {
 
     @EventHandler(priority = EventPriority.LOWEST)
     public void join(PlayerJoinEvent event) {
+        if (!Organizer.getInstance().hasUser(event.getPlayer().getUniqueId())) Organizer.getInstance().setUser(event.getPlayer().getUniqueId());
         if (!Queries.getInstance().hasAccount(event.getPlayer().getUniqueId()))
             Queries.getInstance().setAccount(event.getPlayer().getUniqueId(), event.getPlayer().getName(), false);
         int[] assets = Queries.getInstance().getAccount(event.getPlayer().getUniqueId());

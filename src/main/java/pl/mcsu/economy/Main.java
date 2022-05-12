@@ -66,7 +66,7 @@ public final class Main extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new Drag(), this);
         getServer().getPluginManager().registerEvents(new Interact(), this);
         getServer().getPluginManager().registerEvents(new Join(), this);
-        getServer().getPluginManager().registerEvents(new Pre(), this);
+        //getServer().getPluginManager().registerEvents(new Pre(), this);
         getServer().getPluginManager().registerEvents(new Quit(), this);
     }
 
