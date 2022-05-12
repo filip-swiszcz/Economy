@@ -1,6 +1,6 @@
 name: Economy
 version: '${project.version}'
-main: pl.mcsu.economy.Main
+main: pl.mcsu.economy.Economy
 api-version: 1.18
 authors: [ ProtanButan ]
 website: mcsu.pl

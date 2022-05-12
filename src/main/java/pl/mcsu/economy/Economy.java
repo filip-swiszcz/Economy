@@ -8,30 +8,34 @@ import pl.mcsu.economy.command.Coins;
 import pl.mcsu.economy.command.Set;
 import pl.mcsu.economy.command.Transfer;
 import pl.mcsu.economy.listener.*;
+import pl.mcsu.economy.model.User;
+import pl.mcsu.economy.repository.Container;
 import pl.mcsu.economy.service.Assets;
 
 import java.lang.reflect.Field;
+import java.util.Map;
+import java.util.UUID;
 
-public final class Main extends JavaPlugin {
+public final class Economy extends JavaPlugin {
 
-    private static Main instance;
+    private static Economy instance;
 
-    public Main() {
+    public Economy() {
         instance = this;
     }
 
-    public static Main getInstance() {
+    public static Economy getInstance() {
         return instance;
     }
 
     /*
     *
-    *   Main class
+    *   Economy class
     *
     * */
 
-    public static Assets getApi() {
-        return Assets.getInstance();
+    public Map<UUID, User> userMap() {
+        return Container.getInstance().getUsers();
     }
 
     @Override
