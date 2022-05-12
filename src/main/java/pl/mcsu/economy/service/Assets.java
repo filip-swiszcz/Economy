@@ -22,7 +22,7 @@ public class Assets {
     *
     * */
 
-    public static void add(Player player, Types.Asset asset, int amount) {
+    public void add(Player player, Types.Asset asset, int amount) {
         switch (asset) {
             case COINS -> Organizer.getInstance().getUser(player.getUniqueId())
                     .setCoins(Organizer.getInstance().getUser(player.getUniqueId()).getCoins() + amount);
