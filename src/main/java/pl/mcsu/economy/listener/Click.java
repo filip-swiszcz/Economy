@@ -103,11 +103,13 @@ public class Click implements Listener {
                 Items.getInstance().remove(player, 16);
                 return;
             }
-            if (event.getCurrentItem().displayName().contains(Icons.number(32).displayName())) {
+            if (Objects.equals(Objects.requireNonNull(event.getCurrentItem()).getItemMeta().displayName(),
+                    Icons.number(32).getItemMeta().displayName())) {
                 Items.getInstance().remove(player, 32);
                 return;
             }
-            if (event.getCurrentItem().displayName().contains(Icons.number(64).displayName())) {
+            if (Objects.equals(Objects.requireNonNull(event.getCurrentItem()).getItemMeta().displayName(),
+                    Icons.number(64).getItemMeta().displayName())) {
                 Items.getInstance().remove(player, 64);
                 return;
             }
